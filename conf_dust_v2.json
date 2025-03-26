@@ -139,7 +139,9 @@
       "tag": "🇭🇰 香港节点",
       "type": "urltest",
       "tolerance": 50,
-      "outbounds": ["{all}"],
+      "outbounds":[
+        "{all}"
+      ],
       "filter": [
         {
           "action": "include",
@@ -150,7 +152,9 @@
     {
       "tag": "🇨🇳 台湾节点",
       "type": "urltest",
-      "outbounds": ["{all}"],
+      "outbounds":[
+        "{all}"
+      ],
       "filter": [
         {
           "action": "include",
@@ -164,7 +168,9 @@
     {
       "tag": "🇯🇵 日本节点",
       "type": "urltest",
-      "outbounds": ["{all}"],
+      "outbounds":[
+        "{all}"
+      ],
       "filter": [
         {
           "action": "include",
@@ -178,7 +184,9 @@
     {
       "tag": "🇸🇬 新加坡节点",
       "type": "urltest",
-      "outbounds": ["{all}"],
+      "outbounds":[
+        "{all}"
+      ],
       "filter": [
         {"action": "include","keywords": ["新加坡"]}
       ],
@@ -189,7 +197,9 @@
     {
       "tag": "🇺🇸 美国节点",
       "type": "urltest",
-      "outbounds": ["{all}"],
+      "outbounds":[
+        "{all}"
+      ],
       "filter": [
         {
           "action": "include",
