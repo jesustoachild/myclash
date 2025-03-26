@@ -210,7 +210,7 @@
       "tolerance": 50
     },
     {
-      "tag":"🛫 机场订阅",
+      "tag":"🛫 机场节点",
       "type":"selector",
       "outbounds":[
         "{all}"
