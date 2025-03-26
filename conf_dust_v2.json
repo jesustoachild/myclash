@@ -1,0 +1,262 @@
+{
+  "outbounds": [
+    { "tag": "🚀 节点选择", "type": "selector", "outbounds": [ "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点", "🛫 机场节点", "🆓 自建节点" ] },
+    { "tag": "🐟 漏网之鱼", "type": "selector", "outbounds": [ "🚀 节点选择", "🎯 全球直连" ] },
+    { "tag": "🤖 人工智能", "type": "selector", "outbounds": [ "🇸🇬 新加坡节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇺🇸 美国节点", "🛫 机场节点", "🆓 自建节点" ] },
+    { "tag": "🎮 游戏服务", "type": "selector", "outbounds": [ "🎯 全球直连", "🚀 节点选择" ] },
+    { "tag": "🪟 微软服务", "type": "selector", "outbounds": [ "🎯 全球直连", "🚀 节点选择" ] },
+    { "tag": "🇬 谷歌服务", "type": "selector", "outbounds": [ "🎯 全球直连", "🚀 节点选择" ] },
+    { "tag": "🍎 苹果服务", "type": "selector", "outbounds": [ "🎯 全球直连", "🚀 节点选择" ] },
+    { "tag": "🎥 奈飞视频", "type": "selector", "outbounds": [ "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "📽️ 迪士尼+", "type": "selector", "outbounds": [ "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "🎞️ Max", "type": "selector", "outbounds": [ "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "🎬 Prime Video", "type": "selector", "outbounds": [ "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "🍎 Apple TV+", "type": "selector", "outbounds": [ "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "📹 油管视频", "type": "selector", "outbounds": [ "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "🎵 TikTok", "type": "selector", "outbounds": [ "🇸🇬 新加坡节点", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇺🇸 美国节点" ] },
+    { "tag": "📺 哔哩哔哩", "type": "selector", "outbounds": [ "🎯 全球直连", "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "🎶 Spotify", "type": "selector", "outbounds": [ "🚀 节点选择", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点" ] },
+    { "tag": "📈 网络测试", "type": "selector", "outbounds": [ "🎯 全球直连", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点", "🛫 机场节点", "🆓 自建节点" ] },
+    { "tag": "📋 Trackerslist", "type": "selector", "outbounds": [ "🎯 全球直连", "🚀 节点选择" ] },
+    { "tag": "📲 电报消息", "type": "selector", "outbounds": ["🚀 节点选择"] },
+    { "tag": "🎯 全球直连", "type": "selector", "outbounds": [ "DIRECT"] },
+    { "tag": "REJECT", "type": "block" },
+    { "tag": "DIRECT", "type": "direct" },
+    { "tag": "GLOBAL", "type": "selector", "outbounds": [ "DIRECT", "REJECT", "🇭🇰 香港节点", "🇨🇳 台湾节点", "🇯🇵 日本节点", "🇸🇬 新加坡节点", "🇺🇸 美国节点", "🛫 机场节点", "🆓 自建节点" ] },
+    { "tag": "dns-out", "type": "dns" },
+    { "tag": "🇭🇰 香港节点", "type": "urltest", "tolerance": 50, "providers": [ "🛫 机场订阅" ], "includes": [ "(?i)(🇭🇰|港|hk|hongkong|hong kong)" ] },
+    { "tag": "🇨🇳 台湾节点", "type": "urltest", "tolerance": 50, "providers": [ "🛫 机场订阅" ], "includes": [ "(?i)(🇹🇼|台|tw|taiwan|tai wan)" ] },
+    { "tag": "🇯🇵 日本节点", "type": "urltest", "tolerance": 50, "providers": [ "🛫 机场订阅" ], "includes": [ "(?i)(🇯🇵|日本|jp|japan)" ] },
+    { "tag": "🇸🇬 新加坡节点", "type": "urltest", "tolerance": 50, "providers": [ "🛫 机场订阅" ], "includes": [ "(?i)(🇸🇬|新|sg|singapore)" ] },
+    { "tag": "🇺🇸 美国节点", "type": "urltest", "tolerance": 50, "providers": [ "🛫 机场订阅" ], "includes": [ "(?i)(🇺🇸|美|us|unitedstates|united states)" ] },
+    { "tag": "🛫 机场节点", "type": "selector", "providers": [ "🛫 机场订阅" ] },
+    { "tag": "🆓 自建节点", "type": "selector", "providers": [ "🆓 CF自建" ] }
+  ],
+  "route": {
+    "rules": [
+      { "domain": ["yacd.haishan.me", "metacubex.one", "clash.razord.top", "yacd.metacubex.one"], "outbound": "🎯 全球直连"},
+      { "domain_suffix": ["zimuku.org", "hassbian.com", "yunpan1.cc", "gying.si", "mi.com", "subhd.tv", "api.io.mi.com", "koolcenter.com", "onkyo.com", "poco.cn", "home-assistant.io", "alipan.com", "lanzouc.com", "123pan.com", "smartmidea.net", "appsmb.com", "cconfig.cc", "detail.tmall.com", "classchen.fun", "jesusya.us.kg", "shazam.com", "ditu.baidu.com", "rss-node.com", "hassbian.com"], "outbound": "🎯 全球直连" },
+      { "domain_suffix": ["hitun.io", "one.one.one.one", "snowfl.com", "qichiyu.com"], "outbound": "🚀 节点选择" },
+      { "rule_set": [ "private" ], "outbound": "🎯 全球直连" },
+      { "rule_set": [ "trackerslist" ], "outbound": "📋 Trackerslist" },
+      { "rule_set": [ "applications" ], "outbound": "🎯 全球直连" },
+      { "rule_set": [ "microsoft-cn" ], "outbound": "🪟 微软服务" },
+      { "rule_set": [ "apple-cn" ], "outbound": "🍎 苹果服务" },
+      { "rule_set": [ "google-cn" ], "outbound": "🇬 谷歌服务" },
+      { "rule_set": [ "games-cn" ], "outbound": "🎮 游戏服务" },
+      { "rule_set": [ "netflix" ], "outbound": "🎥 奈飞视频" },
+      { "rule_set": [ "disney" ], "outbound": "📽️ 迪士尼+" },
+      { "rule_set": [ "max" ], "outbound": "🎞️ Max" },
+      { "rule_set": [ "primevideo" ], "outbound": "🎬 Prime Video" },
+      { "rule_set": [ "appletv" ], "outbound": "🍎 Apple TV+" },
+      { "rule_set": [ "youtube" ], "outbound": "📹 油管视频" },
+      { "rule_set": [ "tiktok" ], "outbound": "🎵 TikTok" },
+      { "rule_set": [ "bilibili" ], "outbound": "📺 哔哩哔哩" },
+      { "rule_set": [ "spotify" ], "outbound": "🎶 Spotify" },
+      { "rule_set": [ "ai" ], "outbound": "🤖 人工智能" },
+      { "rule_set": [ "networktest" ], "outbound": "📈 网络测试" },
+      { "rule_set": [ "tld-proxy" ], "outbound": "🚀 节点选择" },
+      { "rule_set": [ "proxy" ], "outbound": "🚀 节点选择" },
+      { "rule_set": [ "tld-cn" ], "outbound": "🎯 全球直连" },
+      { "rule_set": [ "cn" ], "outbound": "🎯 全球直连" },
+      { "rule_set": [ "privateip" ], "outbound": "🎯 全球直连", "skip_resolve": true },
+      { "rule_set": [ "cnip" ], "outbound": "🎯 全球直连" },
+      { "rule_set": [ "netflixip" ], "outbound": "🎥 奈飞视频", "skip_resolve": true },
+      { "rule_set": [ "telegramip" ], "outbound": "📲 电报消息", "skip_resolve": true }
+    ],
+    "rule_set": [
+      {
+        "tag": "fakeip-filter",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/fakeip-filter.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/fakeip-filter.srs"
+      },
+      {
+        "tag": "private",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/private.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/private.srs"
+      },
+      {
+        "tag": "trackerslist",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/trackerslist.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/trackerslist.srs"
+      },
+      {
+        "tag": "applications",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/applications.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/applications.srs"
+      },
+      {
+        "tag": "microsoft-cn",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/microsoft-cn.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/microsoft-cn.srs"
+      },
+      {
+        "tag": "apple-cn",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/apple-cn.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/apple-cn.srs"
+      },
+      {
+        "tag": "google-cn",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/google-cn.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/google-cn.srs"
+      },
+      {
+        "tag": "games-cn",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/games-cn.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/games-cn.srs"
+      },
+      {
+        "tag": "netflix",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/netflix.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/netflix.srs"
+      },
+      {
+        "tag": "disney",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/disney.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/disney.srs"
+      },
+      {
+        "tag": "max",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/max.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/max.srs"
+      },
+      {
+        "tag": "primevideo",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/primevideo.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/primevideo.srs"
+      },
+      {
+        "tag": "appletv",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/appletv.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/appletv.srs"
+      },
+      {
+        "tag": "youtube",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/youtube.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/youtube.srs"
+      },
+      {
+        "tag": "tiktok",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/tiktok.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/tiktok.srs"
+      },
+      {
+        "tag": "bilibili",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/bilibili.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/bilibili.srs"
+      },
+      {
+        "tag": "spotify",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/spotify.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/spotify.srs"
+      },
+      {
+        "tag": "ai",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/ai.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/ai.srs"
+      },
+      {
+        "tag": "networktest",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/networktest.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/networktest.srs"
+      },
+      {
+        "tag": "tld-proxy",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/tld-proxy.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/tld-proxy.srs"
+      },
+      {
+        "tag": "proxy",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/proxy.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/proxy.srs"
+      },
+      {
+        "tag": "tld-cn",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/tld-cn.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/tld-cn.srs"
+      },
+      {
+        "tag": "cn",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/cn.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/cn.srs"
+      },
+      {
+        "tag": "privateip",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/privateip.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/privateip.srs"
+      },
+      {
+        "tag": "cnip",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/cnip.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/cnip.srs"
+      },
+      {
+        "tag": "netflixip",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/netflixip.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/netflixip.srs"
+      },
+      {
+        "tag": "telegramip",
+        "type": "remote",
+        "format": "binary",
+        "path": "./ruleset/telegramip.srs",
+        "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/telegramip.srs"
+      }
+    ],
+    "final": "🐟 漏网之鱼",
+    "auto_detect_interface": true,
+    "concurrent_dial": true
+  }
+}
