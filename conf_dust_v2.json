@@ -251,199 +251,172 @@
       { "rule_set": [ "proxy" ], "outbound": "🚀 节点选择" },
       { "rule_set": [ "tld-cn" ], "outbound": "🎯 全球直连" },
       { "rule_set": [ "cn" ], "outbound": "🎯 全球直连" },
-      { "rule_set": [ "privateip" ], "outbound": "🎯 全球直连", "skip_resolve": true },
+      { "rule_set": [ "privateip" ], "outbound": "🎯 全球直连" },
       { "rule_set": [ "cnip" ], "outbound": "🎯 全球直连" },
-      { "rule_set": [ "netflixip" ], "outbound": "🎥 奈飞视频", "skip_resolve": true },
-      { "rule_set": [ "telegramip" ], "outbound": "📲 电报消息", "skip_resolve": true }
+      { "rule_set": [ "netflixip" ], "outbound": "🎥 奈飞视频" },
+      { "rule_set": [ "telegramip" ], "outbound": "📲 电报消息" }
     ],
     "rule_set": [
       {
         "tag": "fakeip-filter",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/fakeip-filter.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/fakeip-filter.srs"
       },
       {
         "tag": "private",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/private.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/private.srs"
       },
       {
         "tag": "trackerslist",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/trackerslist.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/trackerslist.srs"
       },
       {
         "tag": "applications",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/applications.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/applications.srs"
       },
       {
         "tag": "microsoft-cn",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/microsoft-cn.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/microsoft-cn.srs"
       },
       {
         "tag": "apple-cn",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/apple-cn.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/apple-cn.srs"
       },
       {
         "tag": "google-cn",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/google-cn.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/google-cn.srs"
       },
       {
         "tag": "games-cn",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/games-cn.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/games-cn.srs"
       },
       {
         "tag": "netflix",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/netflix.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/netflix.srs"
       },
       {
         "tag": "disney",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/disney.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/disney.srs"
       },
       {
         "tag": "max",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/max.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/max.srs"
       },
       {
         "tag": "primevideo",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/primevideo.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/primevideo.srs"
       },
       {
         "tag": "appletv",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/appletv.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/appletv.srs"
       },
       {
         "tag": "youtube",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/youtube.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/youtube.srs"
       },
       {
         "tag": "tiktok",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/tiktok.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/tiktok.srs"
       },
       {
         "tag": "bilibili",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/bilibili.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/bilibili.srs"
       },
       {
         "tag": "spotify",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/spotify.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/spotify.srs"
       },
       {
         "tag": "ai",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/ai.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/ai.srs"
       },
       {
         "tag": "networktest",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/networktest.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/networktest.srs"
       },
       {
         "tag": "tld-proxy",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/tld-proxy.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/tld-proxy.srs"
       },
       {
         "tag": "proxy",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/proxy.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/proxy.srs"
       },
       {
         "tag": "tld-cn",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/tld-cn.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/tld-cn.srs"
       },
       {
         "tag": "cn",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/cn.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/cn.srs"
       },
       {
         "tag": "privateip",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/privateip.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/privateip.srs"
       },
       {
         "tag": "cnip",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/cnip.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/cnip.srs"
       },
       {
         "tag": "netflixip",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/netflixip.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/netflixip.srs"
       },
       {
         "tag": "telegramip",
         "type": "remote",
         "format": "binary",
-        "path": "./ruleset/telegramip.srs",
         "url": "http://gh.classchen.fun/https://github.com/DustinWin/ruleset_geodata/releases/download/sing-box-ruleset-compatible/telegramip.srs"
       }
     ],
