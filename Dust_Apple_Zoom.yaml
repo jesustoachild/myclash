@@ -363,14 +363,6 @@ rule-providers:
     url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.mrs"
     interval: 86400
 
-  tld-cn:
-    type: http
-    behavior: domain
-    format: mrs
-    path: ./rules/tld-cn.mrs
-    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-cn.mrs"
-    interval: 86400
-
   cn:
     type: http
     behavior: domain
@@ -511,7 +503,6 @@ rules:
   - RULE-SET,networktest,NetworkTest
   - RULE-SET,tld-proxy,Proxy
   - RULE-SET,proxy,Proxy
-  - RULE-SET,tld-cn,DIRECT
   - RULE-SET,netflixip,Netflix,no-resolve
   - RULE-SET,telegramip,Telegram,no-resolve
   - RULE-SET,privateip,DIRECT,no-resolve
@@ -523,8 +514,7 @@ dns:
   fake-ip-filter:
     - +.lan
     - +.local
-    #- tld-cn
-    - 'rule-set:fakeip-filter,cn,private,apple-cn,google-cn,games-cn,microsoft-cn,tld-cn'
+    - 'rule-set:fakeip-filter,cn,private,apple-cn,google-cn,games-cn,microsoft-cn'
     #- geosite:category-games
     - +.classchen.fun
     - +.gying.si
