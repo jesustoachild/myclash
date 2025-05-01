@@ -301,8 +301,8 @@ rules:
   - GEOIP,netflix,Netflix,no-resolve
   - GEOIP,telegram,Telegram,no-resolve
   - GEOIP,twitter,Proxy,no-resolve
-  - GEOSITE,CN,DIRECT
-  - GEOIP,CN,DIRECT
+  - GEOSITE,cn,DIRECT
+  - GEOIP,cn,DIRECT
 
 
   - IP-CIDR,10.0.0.0/8,DIRECT
@@ -406,7 +406,7 @@ hosts:
 geox-url:                                                                                                                                                                  
   geosite: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat                                                       
   mmdb: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb                                                    
-  geoip: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat                                                      
+  geoip: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat                                        
   asn: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb                                                     
 geo-auto-update: true                                                                                                                                                      
 geo-update-interval: 24    
