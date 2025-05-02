@@ -373,8 +373,7 @@ dns:
       - https://dns.alidns.com/dns-query
       
     "geosite:!cn,!private": 
-      - "tls://dns.google"
-      - "tls://cloudflare-dns.com"
+      - 127.0.0.1:6553
 
 hosts:
   mywebdav.class: 192.168.31.18
