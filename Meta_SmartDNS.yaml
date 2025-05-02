@@ -258,7 +258,6 @@ rules:
   - DOMAIN-SUFFIX,smartmidea.net,DIRECT
   - DOMAIN-SUFFIX,appsmb.com,DIRECT
 
-  #- DOMAIN-SUFFIX,spotify.com,DIRECT
   - DOMAIN-SUFFIX,hitun.io,Proxy
   - DOMAIN-SUFFIX,cconfig.cc,DIRECT
   #- DOMAIN-SUFFIX,ipleak.com,Proxy
@@ -353,7 +352,7 @@ dns:
     - '[2402:4e00::]'
     - '[2400:3200::1]'
   nameserver:
-    - 127.0.0.1:6553
+    - tcp:127.0.0.1:6553 
    
   direct-nameserver:
     - 223.5.5.5
@@ -403,9 +402,9 @@ hosts:
 
 geox-url:                                                                                                                                                                  
   geosite: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat                                                       
-  mmdb: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb                                                    
-  geoip: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat                                        
-  asn: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb                                                     
+  mmdb: https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geoip.metadb                                                   
+  geoip: https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/geoip.dat                                        
+  asn: https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo/Country-ASN-all.mmdb                                                     
 geo-auto-update: true                                                                                                                                                      
 geo-update-interval: 24    
 geodata-mode: true                                                                                                
