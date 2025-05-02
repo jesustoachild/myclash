@@ -367,9 +367,13 @@ dns:
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
-    "geosite:cn,private":
+    "geosite:cn,private,apple,apple-cn":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
+    +.classchen.fun,+.gying.si,+.yunpan1.cc,+.subhd.tv,'*.localdomain': 
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+      
     "geosite:!cn,!private": 
       - "tls://dns.google"
       - "tls://cloudflare-dns.com"
