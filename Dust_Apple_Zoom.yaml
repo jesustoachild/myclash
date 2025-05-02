@@ -431,54 +431,34 @@ rules:
   # 若需禁用 QUIC 请取消注释 QUIC 两条规则
   #- AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((RULE-SET,cn))),REJECT
   #- AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((RULE-SET,cnip))),REJECT
-
-#  - SCRIPT,quic,REJECT
-#  - DOMAIN-SUFFIX,push.apple.com,DIRECT
-#  - DOMAIN-SUFFIX,apple.com,DIRECT
-#  - DOMAIN-KEYWORD,apple,DIRECT
-#  - DOMAIN-KEYWORD,itunes-apple,DIRECT
-#  - DOMAIN-SUFFIX,icloud.com,DIRECT
-#  - DOMAIN-SUFFIX,icloud-content.com,DIRECT
-#  - DOMAIN-SUFFIX,itunes.apple.com,DIRECT
-
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.metacubex.one,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
   - DOMAIN,metacubex.one,DIRECT
   - DOMAIN,raw.gitmirror.com,Proxy
-  - DOMAIN-SUFFIX,yunpan1.cc,Proxy
+  - DOMAIN-SUFFIX,yunpan1.cc,DIRECT
   - DOMAIN-SUFFIX,gying.si,DIRECT
   #- DOMAIN-SUFFIX,.jp,Japan
-  - DOMAIN-SUFFIX,mi.com,DIRECT
   - DOMAIN-SUFFIX,api.io.mi.com,DIRECT
-  - DOMAIN-SUFFIX,koolcenter.com,DIRECT
-  - DOMAIN-SUFFIX,speedtest.net,DIRECT
   - DOMAIN-SUFFIX,onkyo.com,DIRECT
-  - DOMAIN-SUFFIX,hassbian.com,Proxy
   - DOMAIN-SUFFIX,poco.cn,DIRECT
   - DOMAIN-SUFFIX,home-assistant.io,DIRECT
-  - DOMAIN-SUFFIX,alipan.com,DIRECT
-  - DOMAIN-SUFFIX,lanzouc.com,DIRECT
-  - DOMAIN-SUFFIX,123pan.com,DIRECT
   # 美的云服务
-  - DOMAIN-SUFFIX,smartmidea.net,DIRECT
+  #- DOMAIN-SUFFIX,smartmidea.net,DIRECT
   - DOMAIN-SUFFIX,appsmb.com,DIRECT
-
-  #- DOMAIN-SUFFIX,spotify.com,DIRECT
   - DOMAIN-SUFFIX,hitun.io,Proxy
   - DOMAIN-SUFFIX,cconfig.cc,DIRECT
   #- DOMAIN-SUFFIX,ipleak.com,Proxy
   #- DOMAIN-SUFFIX,ipleak.net,Proxy
   - DOMAIN-SUFFIX,one.one.one.one,Proxy
-  - DOMAIN-SUFFIX,detail.tmall.com,DIRECT
   - DOMAIN-SUFFIX,classchen.fun,DIRECT
   - DOMAIN-SUFFIX,jesusya.us.kg,DIRECT
   - DOMAIN-SUFFIX,shazam.com,DIRECT
-  - DOMAIN-SUFFIX,ditu.baidu.com,DIRECT
   - DOMAIN-SUFFIX,rss-node.com,DIRECT
   - DOMAIN-SUFFIX,snowfl.com,Proxy
   - DOMAIN-SUFFIX,qichiyu.com,Proxy
   - DOMAIN-SUFFIX,grok.com,AIGC
+
 
   - RULE-SET,applications,DIRECT
   - RULE-SET,private,DIRECT
