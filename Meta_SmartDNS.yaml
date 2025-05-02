@@ -371,9 +371,6 @@ dns:
     +.classchen.fun,+.gying.si,+.yunpan1.cc,+.subhd.tv,'*.localdomain': 
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
-      
-    "geosite:!cn,!private": 
-      - 127.0.0.1:6553
 
 hosts:
   mywebdav.class: 192.168.31.18
