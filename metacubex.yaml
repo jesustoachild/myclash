@@ -294,7 +294,7 @@ rules:
   - GEOSITE,hbo,Streaming
   - GEOSITE,primevideo,Streaming
   - GEOSITE,apple-tvplus,AppleTV
-  - GEOSITE,microsoft,Microsoft-CN
+  - GEOSITE,microsoft@cn,Microsoft-CN
   - GEOSITE,speedtest,NetworkTest
   - GEOSITE,bilibili,BiliBili
   - GEOSITE,geolocation-!cn,Proxy
@@ -318,7 +318,7 @@ dns:
     - +.lan
     - +.local
     - 'rule-set:fakeip-filter'
-    - 'geosite:cn,private,apple,apple-cn,google-cn,category-games,microsoft'
+    - 'geosite:cn,private,apple,apple-cn,google-cn,category-games,microsoft@cn'
     #- geosite:geo/geosite/category-games.list
     - +.classchen.fun
     - +.gying.si
@@ -368,7 +368,7 @@ dns:
   proxy-server-nameserver:
     - https://doh.pub/dns-query
   nameserver-policy:
-    "geosite:cn,private,apple,apple-cn":
+    "geosite:cn,private,apple,apple-cn,microsoft@cn":
       - https://doh.pub/dns-query
       - https://dns.alidns.com/dns-query
     +.classchen.fun,+.gying.si,+.yunpan1.cc,+.subhd.tv,'*.localdomain': 
