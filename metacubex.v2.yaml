@@ -228,40 +228,27 @@ rule-providers:
     url: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/myclash/refs/heads/main/my_direct.list"
     interval: 86400 # Update interval in seconds (e.g., 24 hours)
 
+  my_proxy:
+    type: http
+    behavior: domain # Use 'classical' for simple rule lists
+    format: text
+    path: ./rules/my_proxy.list # Local path to store the downloaded rules
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/myclash/refs/heads/main/my_proxy.list"
+    interval: 86400 # Update interval in seconds (e.g., 24 hours)
+
+
+
 rules:
 
   # 若需禁用 QUIC 请取消注释 QUIC 两条规则
   #- AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((RULE-SET,cn))),REJECT
   #- AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((RULE-SET,cnip))),REJECT
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.metacubex.one,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
-  - DOMAIN,metacubex.one,DIRECT
-  - DOMAIN,raw.gitmirror.com,Proxy
-  - DOMAIN-SUFFIX,yunpan1.cc,DIRECT
-  - DOMAIN-SUFFIX,gying.si,DIRECT
-  #- DOMAIN-SUFFIX,.jp,Japan
-  - DOMAIN-SUFFIX,api.io.mi.com,DIRECT
-  - DOMAIN-SUFFIX,onkyo.com,DIRECT
-  - DOMAIN-SUFFIX,poco.cn,DIRECT
-  - DOMAIN-SUFFIX,home-assistant.io,DIRECT
-  # 美的云服务
-  #- DOMAIN-SUFFIX,smartmidea.net,DIRECT
-  - DOMAIN-SUFFIX,appsmb.com,DIRECT
-  - DOMAIN-SUFFIX,hitun.io,Proxy
-  - DOMAIN-SUFFIX,cconfig.cc,DIRECT
-  #- DOMAIN-SUFFIX,ipleak.com,Proxy
-  #- DOMAIN-SUFFIX,ipleak.net,Proxy
-  - DOMAIN-SUFFIX,one.one.one.one,Proxy
-  - DOMAIN-SUFFIX,classchen.fun,DIRECT
-  - DOMAIN-SUFFIX,jesusya.us.kg,DIRECT
-  - DOMAIN-SUFFIX,shazam.com,DIRECT
-  - DOMAIN-SUFFIX,rss-node.com,DIRECT
-  - DOMAIN-SUFFIX,snowfl.com,Proxy
-  - DOMAIN-SUFFIX,qichiyu.com,Proxy
-  - DOMAIN-SUFFIX,grok.com,AIGC
   
   - RULE-SET,my_direct,DIRECT
+  - RULE-SET,my_proxy,Proxy
+
+  - DOMAIN-SUFFIX,grok.com,AIGC
+    
   - GEOSITE,category-ai-chat-!cn,AIGC
   - GEOSITE,apple,Apple-CN
   - GEOSITE,apple-cn,Apple-CN
