@@ -260,7 +260,8 @@ rules:
   - DOMAIN-SUFFIX,snowfl.com,Proxy
   - DOMAIN-SUFFIX,qichiyu.com,Proxy
   - DOMAIN-SUFFIX,grok.com,AIGC
-
+  
+  - RULE-SET,my_direct,DIRECT
   - GEOSITE,category-ai-chat-!cn,AIGC
   - GEOSITE,apple,Apple-CN
   - GEOSITE,apple-cn,Apple-CN
@@ -302,7 +303,7 @@ dns:
   fake-ip-filter:
     - +.lan
     - +.local
-    - 'rule-set:fakeip-filter, my_direct'
+    - 'rule-set:fakeip-filter,my_direct'
     - 'geosite:cn,private,apple,apple-cn,google-cn,category-games,microsoft@cn'
     #- geosite:geo/geosite/category-games.list
 
