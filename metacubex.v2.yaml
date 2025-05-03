@@ -220,6 +220,13 @@ rule-providers:
     url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
     interval: 86400
 
+  my_direct:
+    type: http
+    behavior: classical # Use 'classical' for simple rule lists
+    url: “https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/myclash/refs/heads/main/my_direct.list”
+    path: ./rules/my_direct.list # Local path to store the downloaded rules
+    interval: 86400 # Update interval in seconds (e.g., 24 hours)
+
 rules:
 
   # 若需禁用 QUIC 请取消注释 QUIC 两条规则
