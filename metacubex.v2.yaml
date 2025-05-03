@@ -224,8 +224,8 @@ rule-providers:
     type: http
     behavior: domain # Use 'classical' for simple rule lists
     format: text
-    url: “https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/myclash/refs/heads/main/my_direct.list”
     path: ./rules/my_direct.list # Local path to store the downloaded rules
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/myclash/refs/heads/main/my_direct.list"
     interval: 86400 # Update interval in seconds (e.g., 24 hours)
 
 rules:
