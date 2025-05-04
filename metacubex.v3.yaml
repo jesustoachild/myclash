@@ -150,7 +150,7 @@ proxy-groups:
     
   - name: Korea
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-    <<: *
+    <<: *AirPortSelect
     filter: "(?i)韩国|kr|Korea"
 
   - name: Singapore
