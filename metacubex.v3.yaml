@@ -43,7 +43,7 @@ proxy-groups:
   - name: Proxy
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
     type: select
-    proxies: [HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AirP-Node]
+    proxies: [HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AirPortNodes]
 
   - name: Final
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
@@ -58,22 +58,22 @@ proxy-groups:
   - name: YouTube
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/youtube-1.png
     type: select
-    proxies: [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, Singapore, America, AirP-Node]
+    proxies: [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, Singapore, America, AirPortNodes]
     
   - name: Spotify
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     type: select
-    proxies: [DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, AirP-Node]
+    proxies: [DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, AirPortNodes]
 
   - name: Adobe
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/adobe-4.png
     type: select
-    proxies: [Proxy, DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, AirP-Node]
+    proxies: [Proxy, DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, AirPortNodes]
 
   - name: Zoom
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/zoom.png
     type: select
-    proxies: [DIRECT, Proxy, HongKong, TaiWan, Japan, Korea, Singapore, America, AirP-Node]
+    proxies: [DIRECT, Proxy, HongKong, TaiWan, Japan, Korea, Singapore, America, AirPortNodes]
 
   - name: Games
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
@@ -109,7 +109,7 @@ proxy-groups:
   - name: TikTok
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
     type: select
-    proxies: [DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AirP-Node]
+    proxies: [DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AirPortNodes]
 
   - name: Streaming
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
@@ -130,7 +130,7 @@ proxy-groups:
   - name: Telegram
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
     type: select
-    proxies: [Proxy, HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AirP-Node]
+    proxies: [Proxy, HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AirPortNodes]
 
 
   - name: HongKong
@@ -163,7 +163,7 @@ proxy-groups:
     <<: *AirPortSelect
     filter: "(?i)美国|US|United States"
 
-  - name: AirP-Node
+  - name: AirPortNodes
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
     type: select
     include-all-providers: true
