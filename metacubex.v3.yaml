@@ -136,89 +136,43 @@ proxy-groups:
   - name: HongKong
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     <<: *AirPortSelect
-    include-all-providers: true
     filter: '^(?=.*((?i)🇭🇰|香港))(?!(.*((?i)回国|校园|游戏|自建|CF))).*$'
 
   - name: TaiWan
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/taiwan-1.png
-    type: url-test
-    interval: 180
-    tolerance: 50
-    lazy: false
-    url: 'http://www.gstatic.com/generate_204'
-    disable-udp: false
-    timeout: 2000
-    max-failed-times: 3
-    hidden: false
-    include-all-providers: true
+    <<: *AirPortSelect
     filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$'
 
   - name: Japan
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-    type: url-test
-    interval: 180
-    tolerance: 50
-    lazy: false
-    url: 'http://www.gstatic.com/generate_204'
-    disable-udp: false
-    timeout: 2000
-    max-failed-times: 3
-    hidden: false
-    include-all-providers: true
+    <<: *AirPortSelect
     filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|自建|(\b(GAME)\b))).*$'
 
   - name: Korea
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-    type: url-test
-    interval: 180
-    tolerance: 50
-    lazy: false
-    url: 'http://www.gstatic.com/generate_204'
-    disable-udp: false
-    timeout: 2000
-    max-failed-times: 3
-    hidden: false
-    include-all-providers: true
+    <<: *AirPortSelect
     filter: '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$'
 
   - name: Singapore
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    type: url-test
-    interval: 180
-    tolerance: 50
-    lazy: false
-    url: 'http://www.gstatic.com/generate_204'
-    disable-udp: false
-    timeout: 2000
-    max-failed-times: 3
-    hidden: false
-    include-all-providers: true
+    <<: *AirPortSelect
     filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$'
 
   - name: America
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-    type: url-test
-    interval: 180
-    tolerance: 50
-    lazy: false
-    url: 'http://www.gstatic.com/generate_204'
-    disable-udp: false
-    timeout: 2000
-    max-failed-times: 3
-    hidden: false
-    include-all-providers: true
+    <<: *AirPortSelect
     filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)自建|CF)).*$'
 
   - name: AllServer
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
     type: select
-    include-all-providers: true
+    use: Red-Airport
     filter: '^(?=.*(.))(?!.*((?i)群|Game|应急|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|应急|流量|紧急|剩余|官网|到期|Game|套餐|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
   - name: MyNodes
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/building.png
     type: select
-    include-all-providers: true
+    use: Self-Build
     filter: '自建'
 
 rule-providers:
