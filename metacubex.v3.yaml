@@ -172,7 +172,7 @@ proxy-groups:
   - name: MyNodes
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/building.png
     type: select
-    include-all-providers: true
+    use: -Red-Airport
     filter: '自建'
 
 rule-providers:
