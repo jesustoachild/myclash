@@ -136,7 +136,7 @@ proxy-groups:
   - name: HongKong
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     <<: *AirPortSelect
-    filter: '^(?=.*((?i)🇭🇰|香港))(?!(.*((?i)回国|校园|游戏|自建|CF))).*$'
+    filter: "(?i)港|hk|hongkong|hong kong"
 
   - name: TaiWan
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/taiwan-1.png
