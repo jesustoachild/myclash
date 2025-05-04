@@ -1,11 +1,21 @@
 #订阅代理组锚点
-OtherProxyGp: &OtherProxyGp
-  - TaiWan
-  - Japan
-  - Korea
-  - America
-  - MyNodes
-  - AllServer
+# 订阅名，记得修改成自己的
+# 添删订阅在这里和下方订阅链接依葫芦画瓢就行
+AirPortSelect: &AirPortSelect
+  # 如果不希望自动切换请将下面两行注释对调
+  # type: select
+  type: url-test
+  interval: 180
+  tolerance: 50
+  lazy: false
+  url: 'http://www.gstatic.com/generate_204'
+  disable-udp: false
+  timeout: 2000
+  max-failed-times: 3
+  hidden: false  
+  use:
+    - Red-Airport
+    # - 本地配置
 
 # 远程订阅
 proxy-providers: 
@@ -48,7 +58,7 @@ proxy-groups:
   - name: YouTube
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/youtube-1.png
     type: select
-    proxies: [Proxy, HongKong, Singapore, *OtherProxyGp]
+    proxies: [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, Singapore, America, AllServer]
     
   - name: Spotify
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
@@ -125,17 +135,9 @@ proxy-groups:
 
   - name: HongKong
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
-    type: url-test
-    interval: 180
-    tolerance: 50
-    lazy: false
-    url: 'http://www.gstatic.com/generate_204'
-    disable-udp: false
-    timeout: 2000
-    max-failed-times: 3
-    hidden: false
+    <<: *AirPortSelect
     include-all-providers: true
-    filter: '^(?=.*((?i)🇭🇰|香港))(?!(?=.*((?i)回国|校园|游戏|自建|CF))).*$'
+    filter: '^(?=.*((?i)🇭🇰|香港))(?!(.*((?i)回国|校园|游戏|自建|CF))).*$'
 
   - name: TaiWan
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/taiwan-1.png
