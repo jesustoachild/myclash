@@ -48,8 +48,8 @@ proxy-groups:
   - name: YouTube
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/youtube-1.png
     type: select
-    proxies: [Proxy, HongKong, Singapore, <<: *OtherProxyGp]
-
+    proxies: [Proxy, HongKong, Singapore, *OtherProxyGp]
+    
   - name: Spotify
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
     type: select
