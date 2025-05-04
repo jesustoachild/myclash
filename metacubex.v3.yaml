@@ -138,6 +138,11 @@ proxy-groups:
     <<: *AirPortSelect
     filter: "(?i)港|hk|hongkong|hong kong"
 
+  - name: Singapore
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    <<: *AirPortSelect
+    filter: "(?i)新加坡|sg|Singapore"
+
   - name: TaiWan
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/taiwan-1.png
     <<: *AirPortSelect
@@ -152,11 +157,6 @@ proxy-groups:
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
     <<: *AirPortSelect
     filter: "(?i)韩国|kr|Korea"
-
-  - name: Singapore
-    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-    <<: *AirPortSelect
-    filter: "(?i)新加坡|sg|Singapore"
 
   - name: America
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
