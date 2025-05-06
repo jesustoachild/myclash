@@ -53,7 +53,7 @@ proxy-groups:
   - name: AIGC
     icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
     type: select
-    proxies: [Singapore, America, TaiWan, Japan, Korea, MyNodes]
+    proxies: [TaiWan, Singapore, America, Japan, Korea, MyNodes]
 
   - name: YouTube
     icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/youtube-1.png
@@ -228,7 +228,7 @@ rules:
   - GEOSITE,adobe,Adobe
   - GEOSITE,spotify,Spotify
   - GEOSITE,zoom,Zoom
-  - GEOSITE,steam@cn,DIRECT
+
   - GEOSITE,youtube,YouTube
   - GEOSITE,disney,Streaming
   - GEOSITE,hbo,Streaming
@@ -237,14 +237,15 @@ rules:
   - GEOSITE,microsoft@cn,Microsoft-CN
   - GEOSITE,speedtest,NetworkTest
   - GEOSITE,bilibili,BiliBili
+  - GEOSITE,steam@cn,DIRECT
+  - GEOSITE,category-games@cn,DIRECT
+  - GEOSITE,cn,DIRECT
   - GEOSITE,geolocation-!cn,Proxy
+  
   - GEOIP,google,Proxy,no-resolve
   - GEOIP,netflix,Netflix,no-resolve
   - GEOIP,telegram,Telegram,no-resolve
   - GEOIP,twitter,Proxy,no-resolve
-  - GEOSITE,cn,DIRECT
-  - GEOIP,cn,DIRECT
-
 
   - IP-CIDR,10.0.0.0/8,DIRECT
   - IP-CIDR,172.16.0.0/12,DIRECT
