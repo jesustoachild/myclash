@@ -1,0 +1,547 @@
+# 远程订阅
+proxy-providers: 
+  Red-Airport:
+    type: http
+    interval: 42300
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    path: ./proxy_providers/subscribe_Red_Only.yaml
+    url: "http://nas.classchen.fun:3001/jesusya/download/Red?target=ClashMeta"
+
+  Self-Build:
+    type: http
+    interval: 42300
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    path: ./proxy_providers/subscribe_CF.yaml
+    url: "http://nas.classchen.fun:3001/jesusya/download/subcheck?target=ClashMeta"
+
+proxy-groups:
+  - name: Proxy
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
+    type: select
+    proxies: [HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AllServer]
+
+  - name: Final
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+    type: select
+    proxies: [Proxy, DIRECT]
+
+  - name: AIGC
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png
+    type: select
+    proxies: [TaiWan, Singapore, America, Japan, Korea, MyNodes]
+
+  - name: YouTube
+    icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/youtube-1.png
+    type: select
+    proxies: [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, America, MyNodes, AllServer]
+
+  - name: Spotify
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+    type: select
+    proxies: [DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, AllServer]
+
+  - name: Adobe
+    icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/adobe-4.png
+    type: select
+    proxies: [Proxy, DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, AllServer]
+
+  - name: Zoom
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/zoom.png
+    type: select
+    proxies: [DIRECT, Proxy, HongKong, TaiWan, Japan, Korea, Singapore, America, AllServer]
+
+  - name: Games
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+    type: select
+    proxies: [DIRECT, Proxy]
+
+  - name: Microsoft-CN
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png
+    type: select
+    proxies: [DIRECT, Proxy]
+
+  - name: Google-CN
+    icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/google-6.png
+    type: select
+    proxies: [DIRECT, Proxy]
+
+  - name: Apple-CN
+    icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/apple-4.png
+    type: select
+    proxies: [DIRECT, Proxy]
+
+  - name: Netflix
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
+    type: select
+    proxies: [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, America]
+
+
+  - name: AppleTV
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Infuse.png
+    type: select
+    proxies: [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, America]
+
+  - name: TikTok
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png
+    type: select
+    proxies: [DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AllServer]
+
+  - name: Streaming
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png
+    type: select
+    proxies: [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, America]
+
+  - name: NetworkTest
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png
+    type: select
+    proxies: [DIRECT, HongKong, TaiWan, Japan, Korea, Singapore, America]
+
+  - name: BiliBili
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
+    type: select
+    proxies: [DIRECT, Proxy, HongKong, Singapore, TaiWan, Japan, Korea, America]
+
+
+  - name: Telegram
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png
+    type: select
+    proxies: [Proxy, HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AllServer]
+
+
+  - name: HongKong
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
+    type: url-test
+    interval: 180
+    tolerance: 50
+    lazy: false
+    url: 'http://www.gstatic.com/generate_204'
+    disable-udp: false
+    timeout: 2000
+    max-failed-times: 3
+    hidden: false
+    include-all-providers: true
+    filter: '^(?=.*((?i)🇭🇰|香港))(?!(?=.*((?i)回国|校园|游戏|自建|CF))).*$'
+
+  - name: TaiWan
+    icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/taiwan-1.png
+    type: url-test
+    interval: 180
+    tolerance: 50
+    lazy: false
+    url: 'http://www.gstatic.com/generate_204'
+    disable-udp: false
+    timeout: 2000
+    max-failed-times: 3
+    hidden: false
+    include-all-providers: true
+    filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$'
+
+  - name: Japan
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+    type: url-test
+    interval: 180
+    tolerance: 50
+    lazy: false
+    url: 'http://www.gstatic.com/generate_204'
+    disable-udp: false
+    timeout: 2000
+    max-failed-times: 3
+    hidden: false
+    include-all-providers: true
+    filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|自建|(\b(GAME)\b))).*$'
+
+  - name: Korea
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    type: url-test
+    interval: 180
+    tolerance: 50
+    lazy: false
+    url: 'http://www.gstatic.com/generate_204'
+    disable-udp: false
+    timeout: 2000
+    max-failed-times: 3
+    hidden: false
+    include-all-providers: true
+    filter: '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$'
+
+  - name: Singapore
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    type: url-test
+    interval: 180
+    tolerance: 50
+    lazy: false
+    url: 'http://www.gstatic.com/generate_204'
+    disable-udp: false
+    timeout: 2000
+    max-failed-times: 3
+    hidden: false
+    include-all-providers: true
+    filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$'
+
+  - name: America
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+    type: url-test
+    interval: 180
+    tolerance: 50
+    lazy: false
+    url: 'http://www.gstatic.com/generate_204'
+    disable-udp: false
+    timeout: 2000
+    max-failed-times: 3
+    hidden: false
+    include-all-providers: true
+    filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)自建|CF)).*$'
+
+  - name: AllServer
+    icon: https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png
+    type: select
+    include-all-providers: true
+    filter: '^(?=.*(.))(?!.*((?i)群|Game|应急|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|应急|流量|紧急|剩余|官网|到期|Game|套餐|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+  - name: MyNodes
+    icon: https://gh-proxy.com/https://github.com/jesustoachild/clashicon/blob/main/building.png
+    type: select
+    include-all-providers: true
+    filter: '自建'
+
+rule-providers:
+  # 任选一
+  fakeip-filter:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/fakeip-filter.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/fakeip-filter.mrs"
+    interval: 86400
+
+  applications:
+    type: http
+    behavior: classical
+    format: text
+    path: ./rules/applications.list
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/applications.list"
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/private.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/private.mrs"
+    interval: 86400
+
+ # ads:
+ #   type: http
+ #   behavior: domain
+ #   format: mrs
+ #   path: ./rules/ads.mrs
+ #   url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ads.mrs"
+ #   interval: 86400
+
+  microsoft-cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/microsoft-cn.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/microsoft-cn.mrs"
+    interval: 86400
+
+  apple-cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/apple-cn.mrs
+    #url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/apple-cn.mrs"
+    url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/apple.mrs"
+    interval: 86400
+
+  google-cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/google-cn.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/google-cn.mrs"
+    interval: 86400
+
+  games-cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/games-cn.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/games-cn.mrs"
+    interval: 86400
+
+  netflix:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/netflix.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/netflix.mrs"
+    interval: 86400
+
+  disney:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/disney.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/disney.mrs"
+    interval: 86400
+
+  max:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/max.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/max.mrs"
+    interval: 86400
+
+  primevideo:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/primevideo.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/primevideo.mrs"
+    interval: 86400
+
+  appletv:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/appletv.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/appletv.mrs"
+    interval: 86400
+
+  youtube:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/youtube.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/youtube.mrs"
+    interval: 86400
+
+  tiktok:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/tiktok.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tiktok.mrs"
+    interval: 86400
+
+  bilibili:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/bilibili.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/bilibili.mrs"
+    interval: 86400
+
+  ai:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/ai.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/ai.mrs"
+    interval: 86400
+
+  networktest:
+    type: http
+    behavior: classical
+    format: text
+    path: ./rules/networktest.list
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/networktest.list"
+    interval: 86400
+
+  tld-proxy:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/tld-proxy.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/tld-proxy.mrs"
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/proxy.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/proxy.mrs"
+    interval: 86400
+
+  cn:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/cn.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cn.mrs"
+    interval: 86400
+
+  netflixip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./rules/netflixip.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/netflixip.mrs"
+    interval: 86400
+
+  telegramip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./rules/telegramip.mrscn
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/telegramip.mrs"
+    interval: 86400
+
+  privateip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./rules/privateip.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/privateip.mrs"
+    interval: 86400
+
+  cnip:
+    type: http
+    behavior: ipcidr
+    format: mrs
+    path: ./rules/cnip.mrs
+    url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/cnip.mrs"
+    interval: 86400
+
+  Adobe-domain:
+    type: http
+    behavior: domain
+    format: mrs
+    path: ./rules/Adobe-domain.mrs
+    url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/adobe.mrs"
+    interval: 86400
+
+  Spotify-domain:
+      type: http
+      behavior: domain
+      format: mrs
+      path: ./rules/spotify.mrs
+      url: "https://gh-proxy.com/https://github.com/DustinWin/ruleset_geodata/releases/download/mihomo-ruleset/spotify.mrs"
+      interval: 86400
+
+  Zoom-domain:
+      type: http
+      behavior: domain
+      format: mrs
+      path: ./rules/zoom.mrs
+      url: "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/zoom.mrs"
+
+  my_direct:
+      type: http
+      behavior: domain # Use 'classical' for simple rule lists
+      format: text
+      path: ./rules/my_direct.list # Local path to store the downloaded rules
+      url: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/myclash/refs/heads/main/my_direct.list"
+      interval: 86400 # Update interval in seconds (e.g., 24 hours)
+
+  my_proxy:
+      type: http
+      behavior: domain # Use 'classical' for simple rule lists
+      format: text
+      path: ./rules/my_proxy.list # Local path to store the downloaded rules
+      url: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/myclash/refs/heads/main/my_proxy.list"
+      interval: 86400 # Update interval in seconds (e.g., 24 hours)
+
+
+rules:
+
+  # 若需禁用 QUIC 请取消注释 QUIC 两条规则
+  #- AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((RULE-SET,cn))),REJECT
+  #- AND,(AND,(DST-PORT,443),(NETWORK,UDP)),(NOT,((RULE-SET,cnip))),REJECT
+
+
+  - RULE-SET,my_direct,DIRECT
+  - RULE-SET,my_proxy,Proxy
+  
+  - DOMAIN-SUFFIX,grok.com,AIGC
+
+  - RULE-SET,applications,DIRECT
+  #- RULE-SET,ads,Ads
+  - RULE-SET,microsoft-cn,Microsoft-CN
+  - RULE-SET,apple-cn,Apple-CN
+  - RULE-SET,google-cn,Google-CN
+  - RULE-SET,games-cn,Games
+  - RULE-SET,netflix,Netflix
+  - RULE-SET,disney,Streaming
+  - RULE-SET,max,Streaming
+  - RULE-SET,primevideo,Streaming
+  - RULE-SET,appletv,AppleTV
+  - RULE-SET,youtube,YouTube
+  - RULE-SET,tiktok,TikTok
+  - RULE-SET,bilibili,BiliBili
+  - RULE-SET,ai,AIGC
+  - RULE-SET,Adobe-domain,Adobe
+  - RULE-SET,Zoom-domain,Zoom
+  - RULE-SET,Spotify-domain,Spotify
+  - RULE-SET,networktest,NetworkTest
+  - RULE-SET,private,DIRECT
+  - RULE-SET,cn,DIRECT
+  - RULE-SET,tld-proxy,Proxy
+  - RULE-SET,proxy,Proxy
+  - RULE-SET,netflixip,Netflix,no-resolve
+  - RULE-SET,telegramip,Telegram,no-resolve
+  - RULE-SET,privateip,DIRECT,no-resolve
+  - RULE-SET,cnip,DIRECT
+
+  - MATCH,Final
+
+dns:
+  fake-ip-filter:
+    - +.lan
+    - +.local
+    - 'rule-set:fakeip-filter,cn,private,apple-cn,google-cn,games-cn,microsoft-cn,my_direct'
+    #- geosite:category-games
+
+
+hosts:
+  mywebdav.class: 192.168.31.18
+  mywebdav.cl: 192.168.31.18
+  z4s.class: 192.168.31.18
+  z4s.cl: 192.168.31.18
+  isos.class: 192.168.31.41
+  isos.cl: 192.168.31.41
+  ub.class: 192.168.31.9
+  ub.cl: 192.168.31.9
+  ha.class: 192.168.31.208
+  ha.cl: 192.168.31.208
+  9000.cl: 192.168.31.1
+  9000.class: 192.168.31.1
+  6000.class: 192.168.31.6
+  6000.cl: 192.168.31.6
+  pang.cl: 192.168.31.7
+  pang7.cl: 192.168.31.7
+  pang7.class: 192.168.31.7
+  n1.cl: 192.168.31.2
+  n1.class: 192.168.31.2
+  awm.airmx.cn: 192.168.31.16
+  i.airmx.cn: 192.168.31.16
+  homeassistant.local: 192.168.31.208
+
+  doh.pub: [1.12.12.12, 120.53.53.53, 2402:4e00::]
+  dns.alidns.com: [223.5.5.5, 223.6.6.6, 2400:3200::1, 2400:3200:baba::1]
+  dns.google: [8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844]
+  cloudflare-dns.com: [1.1.1.1, 1.0.0.1, 2606:4700:4700::1111, 2606:4700:4700::1001]
+
+geox-url:                                                                                                                                                                  
+  geosite: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat                                                       
+  mmdb: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.metadb                                                    
+  geoip: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat                                                      
+  asn: https://gh-proxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb                                                     
+geo-auto-update: true                                                                                                                                                      
+geo-update-interval: 24    
+
+tls:
+  certificate: /etc/sslkey/clash.classchen.fun.crt
+  private-key: /etc/sslkey/clash.classchen.fun.key
+
+external-controller-tls: 0.0.0.0:9467
