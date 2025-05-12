@@ -11,6 +11,7 @@ proxy-providers:
   Self-Build: { <<: *provider-base, path: ./proxy_providers/subscribe_CF.yaml, url: "http://nas.classchen.fun:3001/jesusya/download/subcheck?target=ClashMeta" }
   
 
+
 proxy-groups:
   # 定义锚点
   url-test-base: &url-test-base { type: url-test, interval: 180, tolerance: 50, lazy: false, url: 'http://www.gstatic.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all-providers: true }
@@ -20,33 +21,33 @@ proxy-groups:
   icon-prefix: &icon-prefix "https://gh-proxy.com/"
 
   # 代理组配置（单行格式）
-  Proxy: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png", proxies: *select-common-proxies }
-  Final: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png", proxies: [Proxy, DIRECT] }
-  AIGC: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png", proxies: [TaiWan, Singapore, America, Japan, Korea, MyNodes] }
-  YouTube: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/jesustoachild/clashicon/main/youtube-1.png", proxies: [Proxy, *select-common-proxies] }
-  Spotify: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png", proxies: [DIRECT, *select-common-proxies] }
-  Adobe: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/jesustoachild/clashicon/main/adobe-4.png", proxies: [Proxy, DIRECT, *select-common-proxies] }
-  Zoom: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/jesustoachild/clashicon/main/zoom.png", proxies: [DIRECT, Proxy, *select-common-proxies] }
-  Games: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png", proxies: *direct-proxy }
-  Microsoft-CN: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png", proxies: *direct-proxy }
-  Google-CN: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/jesustoachild/clashicon/main/google-6.png", proxies: *direct-proxy }
-  Apple-CN: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/jesustoachild/clashicon/main/apple-4.png", proxies: *direct-proxy }
-  Netflix: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png", proxies: *select-streaming-proxies }
-  AppleTV: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Infuse.png", proxies: *select-streaming-proxies }
-  TikTok: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png", proxies: [DIRECT, *select-common-proxies] }
-  Streaming: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png", proxies: *select-streaming-proxies }
-  NetworkTest: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png", proxies: [DIRECT, *select-common-proxies] }
-  BiliBili: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png", proxies: [DIRECT, Proxy, *select-common-proxies] }
-  Telegram: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png", proxies: [Proxy, *select-common-proxies] }
-  HongKong: { <<: *url-test-base, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png", filter: '^(?=.*((?i)🇭🇰|香港))(?!(?=.*((?i)回国|校园|游戏|自建|CF))).*$' }
-  TaiWan: { <<: *url-test-base, icon: *icon-prefix + "https://raw.githubusercontent.com/jesustoachild/clashicon/main/taiwan-1.png", filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$' }
-  Japan: { <<: *url-test-base, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png", filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|自建|(\b(GAME)\b))).*$' }
-  Korea: { <<: *url-test-base, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png", filter: '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$' }
-  Singapore: { <<: *url-test-base, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png", filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$' }
-  America: { <<: *url-test-base, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png", filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)自建|CF)).*$' }
-  AllServer: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png", include-all-providers: true, filter: '^(?=.*(.))(?!.*((?i)群|Game|应急|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|应急|流量|紧急|剩余|官网|到期|Game|套餐|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$' }
-  MyNodes: { type: select, icon: *icon-prefix + "https://raw.githubusercontent.com/jesustoachild/clashicon/main/building.png", include-all-providers: true, filter: '自建' }
-
+  Proxy: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png", proxies: *select-common-proxies }
+  Final: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png", proxies: [Proxy, DIRECT] }
+  AIGC: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png", proxies: [TaiWan, Singapore, America, Japan, Korea, MyNodes] }
+  YouTube: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/youtube-1.png", proxies: [Proxy, *select-common-proxies] }
+  Spotify: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png", proxies: [DIRECT, *select-common-proxies] }
+  Adobe: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/adobe-4.png", proxies: [Proxy, DIRECT, *select-common-proxies] }
+  Zoom: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/zoom.png", proxies: [DIRECT, Proxy, *select-common-proxies] }
+  Games: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png", proxies: *direct-proxy }
+  Microsoft-CN: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Windows_11.png", proxies: *direct-proxy }
+  Google-CN: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/google-6.png", proxies: *direct-proxy }
+  Apple-CN: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/apple-4.png", proxies: *direct-proxy }
+  Netflix: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png", proxies: *select-streaming-proxies }
+  AppleTV: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Infuse.png", proxies: *select-streaming-proxies }
+  TikTok: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png", proxies: [DIRECT, *select-common-proxies] }
+  Streaming: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Streaming.png", proxies: *select-streaming-proxies }
+  NetworkTest: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png", proxies: [DIRECT, *select-common-proxies] }
+  BiliBili: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png", proxies: [DIRECT, Proxy, *select-common-proxies] }
+  Telegram: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram_X.png", proxies: [Proxy, *select-common-proxies] }
+  HongKong: { <<: *url-test-base, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png", filter: '^(?=.*((?i)🇭🇰|香港))(?!(?=.*((?i)回国|校园|游戏|自建|CF))).*$' }
+  TaiWan: { <<: *url-test-base, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/taiwan-1.png", filter: '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$' }
+  Japan: { <<: *url-test-base, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png", filter: '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|自建|(\b(GAME)\b))).*$' }
+  Korea: { <<: *url-test-base, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png", filter: '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$' }
+  Singapore: { <<: *url-test-base, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png", filter: '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|自建|CF|游戏|🎮|(\b(GAME)\b))).*$' }
+  America: { <<: *url-test-base, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png", filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)自建|CF)).*$' }
+  AllServer: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png", include-all-providers: true, filter: '^(?=.*(.))(?!.*((?i)群|Game|应急|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|应急|流量|紧急|剩余|官网|到期|Game|套餐|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$' }
+  MyNodes: { type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/building.png", include-all-providers: true, filter: '自建' }
+```
 rule-providers:
   # 定义锚点
     domain-mrs: &domain-mrs { type: http, behavior: domain, format: mrs }
