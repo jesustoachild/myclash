@@ -42,8 +42,7 @@ proxy-groups:
   - { name: America, <<: *url-test-base, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png", filter: '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)自建|CF)).*$' }
   - { name: AllServer, type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Airport.png", include-all-providers: true, filter: '^(?=.*(.))(?!.*((?i)群|Game|应急|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|应急|流量|紧急|剩余|官网|到期|Game|套餐|加入|(\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$' }
   - { name: MyNodes, type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/jesustoachild/clashicon/main/building.png", include-all-providers: true, filter: '自建' }
-```
-  
+
 rule-providers:
   # 定义锚点
     domain-mrs: &domain-mrs { type: http, behavior: domain, format: mrs }
