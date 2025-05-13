@@ -1,12 +1,18 @@
 # 远程订阅
 
 proxy-providers:
-  # 定义锚点
-  provider-base: &provider-base { type: http, interval: 42300, health-check: { enable: true, url: http://www.gstatic.com/generate_204, interval: 300 } }
-
-  # 提供者配置（单行格式，确保列表项）
-  - { name: Red-Airport, <<: *provider-base, path: ./proxy_providers/subscribe_Red_Only.yaml, url: "http://nas.classchen.fun:3001/jesusya/download/Red?target=ClashMeta" }
-  - { name: Self-Build, <<: *provider-base, path: ./proxy_providers/subscribe_CF.yaml, url: "http://nas.classchen.fun:3001/jesusya/download/subcheck?target=ClashMeta" }
+  - name: Red-Airport
+    type: http
+    interval: 42300
+    health-check: { enable: true, url: http://www.gstatic.com/generate_204, interval: 300 }
+    path: ./proxy_providers/subscribe_Red_Only.yaml
+    url: "http://nas.classchen.fun:3001/jesusya/download/Red?target=ClashMeta"
+  - name: Self-Build
+    type: http
+    interval: 42300
+    health-check: { enable: true, url: http://www.gstatic.com/generate_204, interval: 300 }
+    path: ./proxy_providers/subscribe_CF.yaml
+    url: "http://nas.classchen.fun:3001/jesusya/download/subcheck?target=ClashMeta"
 
 proxy-groups:
   # 定义锚点
