@@ -14,7 +14,6 @@ proxy-groups:
   select-common-proxies: &select-common-proxies [HongKong, TaiWan, Japan, Korea, Singapore, America, MyNodes, AllServer]
   select-streaming-proxies: &select-streaming-proxies [Proxy, HongKong, Singapore, TaiWan, Japan, Korea, America]
   direct-proxy: &direct-proxy [DIRECT, Proxy]
-  icon-prefix: &icon-prefix "https://gh-proxy.com/"
 
   # 代理组配置（单行格式）
   - { name: Proxy, type: select, icon: "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png", proxies: *select-common-proxies }
